@@ -1,0 +1,4 @@
+node_modules
+bin
+extensions.csproj
+obj

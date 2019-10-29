@@ -1,0 +1,29 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "APPINSIGHTS_INSTRUMENTATIONKEY": "",
+    "AZURE_STORAGE_CONNECTION_STRING": "",
+    "AzureWebJobsStorage": "",
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+    "debugBlobFilePrefix": "LOCAL-DEBUGGING-",
+    "debugShowPlatformLogs": "false",
+
+    "OutputBlobStoragePath-configName1": "data/test-out",
+    "TemporaryBlobStoragePath-configName1": "data/test-out-temp",
+
+
+    "sqlSettingPassword": "",
+    "sqlSettingUserName": "",
+    "sqlSettingServer": "",
+    "sqlSettingDatabase": "",
+
+    "sqlProcedureParameterStoredProcedureName-configName1": "",
+    "sqlProcedureParameterPlatformParam-configName1": "",
+    "sqlProcedureParameterRawTableParam-configName1": "",
+    "sqlProcedureParameterDataSourceParam-configName1": "",
+    "storageDefaultContainerName": "data",
+
+    "queueSettingTrigger": "inbound-queue",
+    "queueSettingOut": "out-queue"
+  }
+}
