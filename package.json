@@ -1,7 +1,10 @@
 {
   "name": "azure-function-bootstrap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A starter-pack for writing node azure functions",
+  "repository": {
+    "url": "https://github.com/paceaux/Azure-Function-Bootstrap.git"
+  },
   "main": "index.js",
   "scripts": {
     "lint": "eslint **/*.js -f table",
