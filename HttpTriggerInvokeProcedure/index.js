@@ -62,7 +62,7 @@ module.exports = async function azureFunctionMain(context, request) {
 	} catch (error) {
 		returnStatus = 500;
 		response = error;
-		client.trackException({ exception: error });
+		client.trackException({ exception: error, callbackUrl });
 	}
 
 	/* IF WEBHOOK

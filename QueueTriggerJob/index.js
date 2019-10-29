@@ -3,13 +3,13 @@ const appInsights = require('../Common/insights');
 appInsights.initialize();
 
 const client = appInsights.getClient();
+
+/* IF WEBHOOK 
 const { postHttp } = require('../Common/httpService');
-const { getConfig } = require('../Common/configManager');
+*/
 const { AzureLogError } = require('../Common/utils');
 
 module.exports = async function azureFunctionMain(context, queueItem) {
-	const startTime = Date.now();
-	const { platformSettings, processPlatform } = queueItem;
 
 	/* If there's a webhook
 	let webhookResponse;

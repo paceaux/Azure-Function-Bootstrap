@@ -19,6 +19,7 @@ module.exports = async function azureFunctionMain(context, req) {
 	let returnMessage = 'queue message submitted successfully'; // a default message to send to a queue
 	*/
 	let returnStatus = 202;
+	let returnMessage;
 
 	const { invocationId } = context.executionContext;
 	client.trackEvent({

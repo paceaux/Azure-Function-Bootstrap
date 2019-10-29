@@ -4,6 +4,8 @@
  */
 function delay(t, val) {
 	return new Promise((resolve) => {
+		// this is a pretty well-known global
+		// eslint-disable-next-line no-undef
 		setTimeout(() => {
 			resolve(val);
 		}, t);
@@ -185,6 +187,7 @@ function minutesToMilliseconds(minutes) {
 // eslint-disable-next-line no-unused-vars
 function AzureLog(message, context) {
 	// TODO: figure out why context doesn't work async
+
 	// eslint-disable-next-line no-console
 	console.log(`
 	===============:invocationId:${context.executionContext.invocationId}

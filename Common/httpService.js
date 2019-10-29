@@ -20,6 +20,8 @@ const fetch = require('node-fetch');
  * @returns {FetchOptions}
  */
 function getOptions(uri, method = 'POST') {
+	// this is a known global in node
+	// eslint-disable-next-line no-undef
 	const url = new URL(uri);
 	const { hostname, port } = url;
 	const options = {

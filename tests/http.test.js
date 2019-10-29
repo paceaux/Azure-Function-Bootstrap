@@ -8,7 +8,6 @@ no-proto => because this is a faster way to confirm prototype
 no-unused-expressions => because that's the standard practice for chai
 */
 const { expect } = require('chai');
-const envConfig = require('../local.settings.json').Values;
 const { getHttp, postHttp } = require('../Common/httpService');
 
 const POST_MOCK = { foo: 'bar' };
@@ -21,7 +20,6 @@ describe('HTTP testing', () => {
     });
     it('posts Http', async () => {
         const getPost = await postHttp('https://jsonplaceholder.typicode.com/posts', POST_MOCK);
-        console.log(getPost);
         expect(getPost).to.have.property('foo');
 
     })

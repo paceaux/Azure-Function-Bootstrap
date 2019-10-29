@@ -15,6 +15,8 @@
     "applicationinsights": "^1.4.0",
     "azure-storage": "^2.10.3",
     "durable-functions": "^1.2.1",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
+    "eslint-plugin-react": "^7.16.0",
     "moment": "^2.24.0",
     "mssql": "^5.1.0",
     "node-fetch": "^2.6.0",

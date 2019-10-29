@@ -23,8 +23,7 @@ function getConfig(configName, environment = process.env) {
 			normalizedConfig.set(normalizedKeyName, value);
 		});
 	} catch (error) {
-		// eslint-disable-next-line no-console
-		console.log(error);
+		throw error;
 	}
 	return normalizedConfig;
 }
