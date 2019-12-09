@@ -13,14 +13,12 @@ const { getHttp, postHttp } = require('../Common/httpService');
 const POST_MOCK = { foo: 'bar' };
 
 describe('HTTP testing', () => {
-    it('tests getHttp', async () => {
-        const getTest = await getHttp('https://jsonplaceholder.typicode.com/posts/1');
-        expect(getTest.status).to.equal(200);
-
-    });
-    it('posts Http', async () => {
-        const getPost = await postHttp('https://jsonplaceholder.typicode.com/posts', POST_MOCK);
-        expect(getPost).to.have.property('foo');
-
-    })
+	it('tests getHttp', async () => {
+		const getTest = await getHttp('https://jsonplaceholder.typicode.com/posts/1');
+		expect(getTest.status).to.equal(200);
+	});
+	it('posts Http', async () => {
+		const getPost = await postHttp('https://jsonplaceholder.typicode.com/posts', POST_MOCK);
+		expect(getPost).to.have.property('foo');
+	});
 });

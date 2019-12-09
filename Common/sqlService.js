@@ -94,7 +94,11 @@ async function getStoredProcedure(storedProcedureFileParams, request) {
  */
 async function asyncRunStoredProcedure(blobParamsForProcedure, storedProcedureConfig) {
 	const { storedProcedureName } = storedProcedureConfig;
-	const storedProcedureParameters = Object.assign({}, blobParamsForProcedure, storedProcedureConfig);
+	const storedProcedureParameters = Object.assign(
+		{},
+		blobParamsForProcedure,
+		storedProcedureConfig
+	);
 	let result;
 
 	try {

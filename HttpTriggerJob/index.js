@@ -16,7 +16,8 @@ module.exports = async function azureFunctionMain(context, req) {
 	/* SEND MESSAGE TO QUEUE
 	const messageQueueText = JSON.stringify({ ...req.body }); //  get the body message
 	const messageQueueName = queues.triggerQueue; // get a queue name
-	let returnMessage = 'queue message submitted successfully'; // a default message to send to a queue
+	// a default message to send to a queue
+	let returnMessage = 'queue message submitted successfully';
 	*/
 	let returnStatus = 202;
 	let returnMessage;
@@ -36,7 +37,8 @@ module.exports = async function azureFunctionMain(context, req) {
 
 		/* SEND MESSAGE TO QUEUE
 		await createQueue(queueService, messageQueueName); // create a queue if it doesn't exist
-		returnMessage = await sendMessageToQueue(queueService, { messageQueueName, messageQueueText }); // send a message to the queue
+		// send a message to the queue
+		returnMessage = await sendMessageToQueue(queueService, { messageQueueName, messageQueueText });
 		client.trackEvent({
 			name: 'httpTriggerLongRunningJob:afterSendMessage',
 			properties: { messageQueueName, returnMessage, invocationId }

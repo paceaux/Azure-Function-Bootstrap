@@ -57,7 +57,8 @@ module.exports = async function azureFunctionMain(context, request) {
 		response = Object.assign({}, result);
 
 		/* IF WEBHOOK
-		webhookResponse = Object.assign({}, response); // don't assume that what goes in the webhook is what goes in response
+		webhookResponse = Object.assign({}, response);
+		// don't assume that what goes in the webhook is what goes in response
 		*/
 	} catch (error) {
 		returnStatus = 500;
