@@ -4,8 +4,8 @@ appInsights.initialize();
 
 const client = appInsights.getClient();
 const { AzureLog, AzureLogError } = require('../Common/utils');
-
-module.exports = function azureFunctionMain(context, timerSchedule) {
+const { postHttp } = require('../Common/httpService');
+module.exports = async function azureFunctionMain(context, timerSchedule) {
 	const startTime = new Date().toISOString();
 
 	const { invocationId } = context.executionContext;
@@ -17,6 +17,8 @@ module.exports = function azureFunctionMain(context, timerSchedule) {
 
 	try {
 		// DO THINGS
+		// for example, post to a webhook
+		await postHttp('http://localhost:7071/api/HttpWebhookDebugger', timerSchedule);
 	} catch (timerProcessingError) {
 		timerProcessingError.invocationId = invocationId;
 
