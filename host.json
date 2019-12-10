@@ -1,6 +1,6 @@
 {
   "version": "2.0",
-  "functions": ["HttpTriggerJob", "QueueTriggerJob, HttpTriggerInvokeProcedure"],
+  "functions": ["HttpTriggerJob", "QueueTriggerJob, HttpTriggerInvokeProcedure, TimerTriggerJob"],
   "functionTimeout": "16:00:00",
   "extensions": {
     "queues": {
@@ -11,7 +11,7 @@
     }
   },
   "logging": {
-    "fileLoggingMode": "debugOnly",
+    "fileLoggingMode": "always",
     "logLevel": {
       "default": "Information"
     },
@@ -31,5 +31,6 @@
     "healthCheckWindow": "00:02:00",
     "healthCheckThreshold": 6,
     "counterThreshold": 0.80
-  }
+  }, 
+  "watchDirectories": ["Common", "config"]
 }
