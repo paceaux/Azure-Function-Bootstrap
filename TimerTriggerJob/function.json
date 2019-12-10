@@ -1,0 +1,8 @@
+{
+    "schedule": "*/10 * * * * *",
+    "name": "timerInfo",
+    "type": "timerTrigger",
+    "direction": "in",
+    "runOnStartup": true,
+    "useMonitor": true
+}
