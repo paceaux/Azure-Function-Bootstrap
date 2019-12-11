@@ -13,21 +13,25 @@ It includes:
    - time converters, a promiseified `delay`, async `forEach`
    - sql utility complete with stored procedure options
 3. Promise-ified azure storage utilities for use with `async` /`await`
-4. Application insights added and sprinkled through out
-5. Two types of triggered functions
+4. Application insights added and sprinkled throughout
+5. Types of triggered functions
    - HttpTrigger
    - QueueTrigger
-6. Code Quality
+   - TimerTrigger
+6. A webhook debugger
+7. Code Quality
    - linter
    - unit tests
 
 ## Functions
 
-This contains three functions:
+This contains these functions:
 
 - HttpTriggerInvokeProcedure
 - HttpTriggerJob
 - QueueTriggeredJob
+- HttpWebhookDebugger
+- TimerTrigger
 
 ### HttpTriggerJob
 
@@ -92,6 +96,15 @@ It will generate a SAS key to access the blob, and it will then trigger a stored
 }
 ```
 
+### TimerTriggerJob
+This runs on a timer. The timing interval is defined in the function.json. It's a cron job. 
+
+
+### HttpWebhookDebugger
+This is solely for functions that use a webhook. In any case where a webhook needs callback url - or you need to test a POST request, you can use this. 
+
+The webhook debugger takes a JSON body and returns it back. 
+
 # Setup
 
 ## Prerequisites
@@ -120,6 +133,7 @@ It will generate a SAS key to access the blob, and it will then trigger a stored
 
    > HttpTriggeredInvokeProcedure: [GET,POST] http://localhost:7071/api/HttpTriggeredInvokeProcedure
    > HttpTriggerJob: [GET,POST] http://localhost:7071/api/HttpTriggerJob
+   > HttpWebhookDebugger [POST ] http://localhost:7071/api/HttpWebhookDebugger
 
 3) `ctrl + click` the link. Your default browser will open and the azure function will execute locally. You are now able to add any necessary breakpoints within the application.
 
