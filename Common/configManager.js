@@ -9,22 +9,20 @@ const { SearchableKeyMap } = require('./utils');
  */
 function getConfig(configName, environment = process.env) {
 	const normalizedConfig = new Map();
-	try {
-		const environmentMap = new SearchableKeyMap(Object.entries(environment));
-		// gets all config values related specifically to the configName
-		const config = environmentMap.mapFromKeysContaining(configName);
 
-		// normalization on assumption that specific configs are -ConfigName
-		config.forEach((value, key) => {
-			const normalizedKeyName = key
-				.replace('-', '')
-				.replace(new RegExp(configName, 'gi'), '');
+	const environmentMap = new SearchableKeyMap(Object.entries(environment));
+	// gets all config values related specifically to the configName
+	const config = environmentMap.mapFromKeysContaining(configName);
 
-			normalizedConfig.set(normalizedKeyName, value);
-		});
-	} catch (error) {
-		throw error;
-	}
+	// normalization on assumption that specific configs are -ConfigName
+	config.forEach((value, key) => {
+		const normalizedKeyName = key
+			.replace('-', '')
+			.replace(new RegExp(configName, 'gi'), '');
+
+		normalizedConfig.set(normalizedKeyName, value);
+	});
+
 	return normalizedConfig;
 }
 
