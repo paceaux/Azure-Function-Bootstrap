@@ -10,6 +10,7 @@ no-unused-expressions => because that's the standard practice for chai
 const { expect } = require('chai');
 const envConfig = require('../local.settings.json').Values;
 const { SearchableKeyMap } = require('../Common/utils');
+
 const NAME_OF_CONFIG = '-configName1';
 const NAME_OF_CONFIG_LOWER = NAME_OF_CONFIG.toLowerCase();
 

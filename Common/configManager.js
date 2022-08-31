@@ -1,4 +1,4 @@
-const { SearchableKeyMap } = require('../Common/utils');
+const { SearchableKeyMap } = require('./utils');
 
 /** Creates a Map that contains configuration properties from the environment
  * @param  {string} configName name of namespaced configurations in app settings

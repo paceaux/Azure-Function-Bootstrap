@@ -23,7 +23,6 @@ async function generateSasToken(containerName = defaultContainerName, blobName =
 	const expiryDate = new Date(startDate);
 	expiryDate.setMinutes(startDate.getMinutes() + defaultTokenDuration);
 
-
 	const sharedAccessPolicy = {
 		AccessPolicy: {
 			Permissions: permissionLevel,

@@ -19,7 +19,7 @@ describe('testing configManager', () => {
 				`OutputBlobStoragePath-${CONFIG_NAME}`,
 				`TemporaryBlobStoragePath-${CONFIG_NAME}`,
 				`AutomatedLoadTransformConfig-${CONFIG_NAME}`,
-				`sqlProcedureParameterStoredProcedureName-${CONFIG_NAME}`,
+				`sqlProcedureParameterStoredProcedureName-${CONFIG_NAME}`
 			);
 		});
 	});

@@ -1,7 +1,7 @@
 const appInsights = require('applicationinsights');
 
 let client = appInsights.defaultClient;
-const { insights } = require('../config/');
+const { insights } = require('../config');
 
 function initialize() {
 	const { instrumentationKey } = insights;

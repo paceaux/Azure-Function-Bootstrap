@@ -5,6 +5,7 @@ appInsights.initialize();
 const client = appInsights.getClient();
 const { AzureLog, AzureLogError } = require('../Common/utils');
 const { postHttp } = require('../Common/httpService');
+
 module.exports = async function azureFunctionMain(context, timerSchedule) {
 	const startTime = new Date().toISOString();
 
@@ -28,7 +29,6 @@ module.exports = async function azureFunctionMain(context, timerSchedule) {
 			exception: timerProcessingError
 		});
 	}
-
 
 	const endTime = new Date().toISOString();
 

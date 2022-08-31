@@ -12,13 +12,14 @@ const {
 	returnDateTime,
 	mergeArrays
 } = require('../Common/utils');
+
 describe('utils testing', () => {
 	describe('returnDateTime', () => {
 		it('returns a string', () => {
 			const dateTime = returnDateTime();
 			expect(dateTime).to.be.a('string');
 		});
-		it('returns a date time that\'s accurate', ()=>{
+		it('returns a date time that\'s accurate', () => {
 			const nowDate = new Date();
 			const nowMonth = `${nowDate.getMonth() + 1}`;
 			const nowYear = nowDate.getFullYear().toString();

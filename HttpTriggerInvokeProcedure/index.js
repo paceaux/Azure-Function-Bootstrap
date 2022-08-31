@@ -54,7 +54,7 @@ module.exports = async function azureFunctionMain(context, request) {
 			filePath
 		};
 		result = await asyncRunStoredProcedure(blobParamsForProcedure, storedProcedureConfig);
-		response = Object.assign({}, result);
+		response = { ...result };
 
 		/* IF WEBHOOK
 		webhookResponse = Object.assign({}, response);

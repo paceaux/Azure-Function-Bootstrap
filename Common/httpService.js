@@ -1,4 +1,4 @@
-const appInsights = require('../Common/insights');
+const appInsights = require('./insights');
 
 appInsights.initialize();
 
@@ -55,7 +55,6 @@ async function postHttp(uri, data) {
 	}
 	return result;
 }
-
 
 async function getHttp(uri) {
 	const options = getOptions(uri, 'GET');

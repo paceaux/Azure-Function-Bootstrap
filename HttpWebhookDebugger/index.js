@@ -14,7 +14,7 @@ module.exports = async function azureFunctionMain(context, httpRequest) {
 		if (!httpRequest.body) {
 			throw Error('No JSON body provided');
 		}
-		returnMessage = Object.assign({}, httpRequest.body);
+		returnMessage = { ...httpRequest.body };
 
 		client.trackEvent({
 			name: 'WebHookDebugger:',

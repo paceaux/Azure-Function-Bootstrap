@@ -4,7 +4,6 @@ const cfg1PlatformParam = process.env['sqlProcedureParameterPlatformParam-config
 const cfg1RawTableParam = process.env['sqlProcedureParameterRawTableParam-configName1'];
 const cfg1DataSourceParam = process.env['sqlProcedureParameterDataSourceParam-configName1'];
 
-
 const cfg1StoredProcedureParameters = {
 	storedProcedureName: cfg1StoredProcedureName || 'FileJSONExtractFromBLOB',
 	platformParam: cfg1PlatformParam || '',
