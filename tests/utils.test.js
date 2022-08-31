@@ -25,8 +25,8 @@ describe('utils testing', () => {
 			const dateTime = returnDateTime();
 			const [year, month] = dateTime.split(new RegExp('[-:T]'));
 
-			expect(year).to.equal(nowYear);
-			expect(month).to.equal(nowMonth);
+			expect(parseInt(year, 10)).to.equal(parseInt(nowYear, 10));
+			expect(parseInt(month, 10)).to.equal(parseInt(nowMonth, 10));
 		});
 	});
 	describe('mergeArrays', () => {
