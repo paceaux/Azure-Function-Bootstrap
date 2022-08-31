@@ -1,6 +1,6 @@
 {
   "name": "azure-function-bootstrap",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A starter-pack for writing node azure functions",
   "repository": {
     "url": "https://github.com/paceaux/Azure-Function-Bootstrap.git"
