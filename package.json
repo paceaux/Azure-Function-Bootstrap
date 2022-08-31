@@ -7,8 +7,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "lint": "eslint **/*.js -f table",
-    "lint:fix": "eslint **/*.js --fix",
+    "lint": "eslint . -f table",
+    "lint:fix": "eslint . --fix",
     "test:js": "mocha tests/*.js",
     "test": "npm run lint & npm run test:js"
   },
@@ -18,18 +18,17 @@
     "applicationinsights": "^1.8.10",
     "azure-storage": "^2.10.7",
     "durable-functions": "^1.5.4",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.31.1",
     "mssql": "^5.1.5",
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
     "chai": "^4.3.6",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.1",
-    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint": "^8.23.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-formatter-table": "^7.32.1",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jest": "^22.21.0",
+    "eslint-plugin-jest": "^27.0.1",
     "mocha": "^6.2.3"
   }
 }

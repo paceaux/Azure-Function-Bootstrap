@@ -1,10 +1,14 @@
 module.exports = {
+    "ignorePatterns": [
+        "node_modules",
+    ],
     "env": {
         "browser": false,
         "commonjs": true,
-        "es6": true
+        "es2022": true,
+        "jest": true,
     },
-    "extends": "airbnb-base/legacy",
+    "extends": "airbnb-base",
     "globals": {
         "Atomics": "readonly",
         "SharedArrayBuffer": "readonly",
@@ -13,7 +17,7 @@ module.exports = {
         "console": "readonly",
     },
     "parserOptions": {
-        "ecmaVersion": 2019
+        "ecmaVersion": 'latest'
     },
 	"rules": {
         'no-tabs': 0,
