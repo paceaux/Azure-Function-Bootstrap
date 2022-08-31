@@ -12,8 +12,6 @@ const envConfig = require('../local.settings.json').Values;
 
 const sasConfig = require('../config/sas.config');
 
-// DON'T EXECUTE TESTS IF STORAGE HASN'T BEEN SETUP
-if (!sasConfig.connectionString || !sasConfig.storageAccount) return;
 const {
 	saveToBlob,
 	getBlobService,
@@ -21,6 +19,8 @@ const {
 } = require('../Common/storageService');
 
 describe('The Storage Environment', () => {
+	//  DON'T EXECUTE TESTS IF STORAGE HASN'T BEEN SETUP
+	if (!sasConfig.connectionString || !sasConfig.storageAccount) return;
 	describe('local.settings.json info', () => {
 		it('has connection strings', () => {
 			expect(envConfig).to.have.any.keys('AZURE_STORAGE_CONNECTION_STRING', 'AzureWebJobsStorage');
