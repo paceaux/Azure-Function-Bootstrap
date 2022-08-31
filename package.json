@@ -15,21 +15,21 @@
   "author": "Frank M. Taylor",
   "license": "MIT",
   "dependencies": {
-    "applicationinsights": "^1.4.0",
-    "azure-storage": "^2.10.3",
-    "durable-functions": "^1.2.1",
-    "eslint-plugin-jsx-a11y": "^6.1.1",
-    "eslint-plugin-react": "^7.16.0",
-    "mssql": "^5.1.0",
+    "applicationinsights": "^1.8.10",
+    "azure-storage": "^2.10.7",
+    "durable-functions": "^1.5.4",
+    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "eslint-plugin-react": "^7.31.1",
+    "mssql": "^5.1.5",
     "node-fetch": "^2.6.7"
   },
   "devDependencies": {
-    "chai": "^4.2.0",
+    "chai": "^4.3.6",
     "eslint": "^5.16.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.17.2",
-    "eslint-plugin-jest": "^22.5.1",
-    "mocha": "^6.2.2"
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^22.21.0",
+    "mocha": "^6.2.3"
   }
 }
