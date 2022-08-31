@@ -166,10 +166,10 @@ async function createContainer(containerName, overrideBlobService) {
 /** Asynchronously saves data into a blob
  * @param  {BlobParams} blobParams parameters for saving the blob
  * @param  {BlobData} blobData extracted data
- * @param  {object} metadata optional. additional data to add to blob
- * @param {BlobService} overrideBlobService optional. a blob service that isn't the default
+ * @param  {object} [metadata={}] optional. additional data to add to blob
+ * @param {BlobService} [blobService=getBlobService()] optional. a blob service
  */
-async function saveToBlob(blobParams, blobData, metadata = {}, overrideBlobService) {
+async function saveToBlob(blobParams, blobData, metadata = {}, blobService = getBlobService()) {
 	const startTime = Date.now();
 	const { fileFullPath, blobContainerName } = blobParams;
 	const dataToSave = JSON.stringify({ data: blobData });
@@ -181,7 +181,6 @@ async function saveToBlob(blobParams, blobData, metadata = {}, overrideBlobServi
 	};
 
 	const containerName = blobContainerName || defaultContainerName;
-	const blobService = overrideBlobService || getBlobService();
 	await createContainer(containerName, blobService);
 
 	return new Promise((resolve, reject) => {

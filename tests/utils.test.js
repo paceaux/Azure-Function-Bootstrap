@@ -24,7 +24,7 @@ describe('utils testing', () => {
 			const nowMonth = `${nowDate.getMonth() + 1}`;
 			const nowYear = nowDate.getFullYear().toString();
 			const dateTime = returnDateTime();
-			const [year, month] = dateTime.split(new RegExp('[-:T]'));
+			const [year, month] = dateTime.split(/[-:T]/);
 
 			expect(parseInt(year, 10)).to.equal(parseInt(nowYear, 10));
 			expect(parseInt(month, 10)).to.equal(parseInt(nowMonth, 10));
