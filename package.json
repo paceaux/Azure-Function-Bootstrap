@@ -17,7 +17,7 @@
   "dependencies": {
     "applicationinsights": "^2.3.4",
     "azure-storage": "^2.10.7",
-    "durable-functions": "^1.5.4",
+    "durable-functions": "^2.0.2",
     "mssql": "^5.1.5",
     "node-fetch": "^2.6.7"
   },
